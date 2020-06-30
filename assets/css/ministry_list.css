@@ -1,0 +1,288 @@
+* {
+	margin: 0;
+	padding: 0;
+	color: #323e48;
+	background-color: #ffffff;
+	font-family: 'Lato', sans-serif;
+}
+
+.text-primary {
+	color: rgb(204, 75, 75);
+}
+
+/* === HEADER  === */
+
+header {
+	display: flex;
+	height: 87px;
+	justify-content: space-between;
+	padding: 20px 80px;
+	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.06);
+	z-index: 2;
+}
+.logo {
+	font-weight: 700;
+}
+.navigation {
+	display: flex;
+	justify-content: space-between;
+}
+.link {
+	font-size: 16px;
+	text-decoration: none;
+	padding: 12px;
+	margin-left: 2.5rem;
+	color: #323e48;
+}
+.link:hover,
+.link:focus {
+	font-weight: 800;
+	transition: all 0.6s;
+}
+.link.current {
+	font-weight: 800;
+}
+.link.current:hover,
+.link.current:active,
+.link.focus {
+	font-weight: 700;
+}
+.search {
+	background: transparent;
+}
+.menu-btn {
+	margin: 0;
+	padding: 0;
+	display: none;
+	margin-left: 10px;
+	margin-top: auto;
+	margin-bottom: auto;
+	cursor: pointer;
+	z-index: 3;
+	background: transparent;
+}
+.btn-line {
+	width: 18px;
+	height: 2px;
+	margin: 0 0 5px 0;
+	background: rgb(1, 33, 44);
+	transition: all 0.6s;
+}
+
+/* ==== LANDING =====*/
+.landing {
+	padding: 20px 80px;
+}
+.crumbs {
+	display: flex;
+	margin: 100px 0;
+}
+.crumbs h6 {
+	font-weight: 600;
+	color: #00945e;
+	font-size: 16px;
+}
+.img {
+	background: url(../imgs/Ellipse\ 60.svg);
+	height: 4px;
+	width: 4px;
+	margin-top: 8px;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+.landing-text {
+	font-size: 40px;
+	font-weight: 800;
+	margin: 30px 0;
+}
+.landing-paragraph {
+	line-height: 2;
+	font-size: 15px;
+	width: 50%;
+}
+/* ====END OF LANDING STYLES =====*/
+
+/* ====EXPENDITURE STYLES =====*/
+
+.selected-text {
+	font-size: 16px;
+	font-weight: 600;
+	color: #33a97e;
+	display: inline-block;
+	margin: 0px 80px;
+	padding: 15px 10px;
+	border-bottom: 4px solid #33a97e;
+	z-index: 1;
+}
+.line {
+	height: 2px;
+	width: 100%;
+	background-color: #d5d9d8;
+	margin-top: -3px;
+	z-index: 1;
+}
+
+/* ==== EXPENDITURE STYLES =====*/
+.expenditure {
+	padding: 20px 80px;
+}
+.expenditure-row {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.expenditure-card {
+	width: 100%;
+	padding: 17px;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 10px 20px rgba(0, 0, 0, 0.04);
+}
+.line-chart {
+	background: url(../imgs/Group\ 545.svg);
+	height: 14rem;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.nig-logo {
+	background: url(../imgs/image\ 7.svg);
+	height: 4rem;
+	width: 4rem;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	margin-left: 28%;
+	margin-top: -6rem;
+}
+.content {
+	margin-top: 0.5rem;
+}
+.content-header {
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 2.4rem;
+}
+.content-description {
+	font-size: 18px;
+	margin: 0.7rem 0;
+	font-weight: 600;
+}
+.amount {
+	font-size: 20px;
+	font-weight: 600;
+	color: #33a97e;
+	line-height: 1;
+}
+.year {
+	line-height: 1;
+	font-weight: 300;
+	font-size: 14px;
+}
+@media screen and (max-width: 1024px) {
+	.landing-paragraph {
+		width: 70%;
+	}
+	.menu-btn {
+		display: flex;
+		flex-direction: column;
+	}
+	.navigation {
+		color: white;
+		position: fixed;
+		display: grid;
+		grid-gap: 30px;
+		text-align: center;
+		justify-content: center;
+		align-content: center;
+		flex-direction: column;
+		width: 80vw;
+		right: 0;
+		top: 0;
+		height: 100vh;
+		transition: all 0.6s;
+		transform: translate3d(100%, 0, 0);
+		visibility: hidden;
+		background-color: #00945e;
+		z-index: 1;
+	}
+	.link {
+		color: white;
+		margin: 0;
+	}
+	.navigation.show {
+		visibility: visible;
+		transform: translate3d(0, 0, 0);
+	}
+	.menu-btn.close {
+		transition: all 0.6s;
+	}
+	.menu-btn.close .btn-line:nth-child(1) {
+		transform: rotate(45deg) translateY(5px);
+		background-color: #ffffff;
+	}
+	.menu-btn.close .btn-line:nth-child(2) {
+		display: none;
+	}
+	.menu-btn.close .btn-line:nth-child(3) {
+		transform: rotate(-45deg) translateY(-5px);
+		background-color: #ffffff;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.logo {
+		background: url(../imgs/Logo.png);
+	}
+	.landing-paragraph {
+		line-height: 2;
+		font-size: 15px;
+		width: 100%;
+	}
+	header {
+		padding: 20px 50px;
+	}
+	.selected-text {
+		font-size: 16px;
+		margin: 0px 50px;
+	}
+	.landing {
+		padding: 20px 50px;
+	}
+	.expenditure {
+		padding: 20px 50px;
+	}
+	.landing-text {
+		font-size: 32px;
+		font-weight: 800;
+		margin: 30px 0;
+	}
+	.crumbs {
+		display: flex;
+		margin: 80px 0;
+	}
+	.crumbs h6 {
+		font-size: 14px;
+	}
+	.selected-text {
+		font-size: 14px;
+		font-weight: 600;
+		color: #33a97e;
+		display: inline-block;
+		padding: 15px 10px;
+		border-bottom: 3px solid #33a97e;
+		z-index: 1;
+	}
+}
+@media screen and (max-width: 578px) {
+	.line-chart {
+		height: 20rem;
+	}
+	.nig-logo {
+		background: url(../imgs/image\ 7.svg);
+		width: 5rem;
+		left: auto;
+		right: auto;
+	}
+	.landing-paragraph {
+		width: 100%;
+	}
+}
